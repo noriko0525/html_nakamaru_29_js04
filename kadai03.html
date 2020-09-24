@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>メトロポリタン</title>
+</head>
+<body>
+<div id="com"></div>
+<a href="http://zipcloud.ibsnet.co.jp/api/search?zipcode=2500011">http://zipcloud.ibsnet.co.jp/api/search?zipcode=2500011</a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AsEwz7pvXQydBxRzOID7bW9cW2uAaHbJ1QzUu9WWUxAm6eUf--rNPYwTfr8ovZ9x" async defer></script>
+<script src="js/BmapQuery.js"></script>
+
+<script>
+const objectID = [
+        1,2,3,4,5,6,7,8,9,10
+        ]
+$.ajax({
+  //type: オプションは$.ajaxの初期値では"GET"です。
+  url: "https://collectionapi.metmuseum.org/public/collection/v1/objects",
+  data: {//パラメータ
+    "departmentIds":"3|9|12"
+  },
+  success: function(data){
+    //リクエストが成功した際に実行する関数
+    console.log(data);
+    showData(data);
+  },
+  dataType: "json"
+});
+
+function showData(data){
+    const museamData = data
+    for( let i=0; i<len; i++){
+
+    }
+}
+
+</script>
+</body>
+</html>
